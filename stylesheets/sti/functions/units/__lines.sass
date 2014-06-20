@@ -1,0 +1,8 @@
+@function lines($value: false, $line-height: $base-line-height)
+  @if $line-height
+    @if $value != 0
+      @return ($value / $line-height)
+    @else
+      @return unquote("0px")
+  @else
+    @warn "$base-line-height has not been established"

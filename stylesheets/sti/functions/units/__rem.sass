@@ -1,0 +1,9 @@
+// custom return a rem value based off of $base-font-size (compass/typography/vertical_rhythm) 
+@function rem($value: false, $font-size: $base-font-size)
+  @if $font-size
+    @if $value != 0
+      @return #{$value / $font-size}rem
+    @else
+      @return unquote("0px")
+  @else
+    @warn "$base-font-size has not been established"

@@ -1,0 +1,11 @@
+@function position_class($classes, $placement: nested)
+  $cls-list: ()
+  @if $classes
+    // Process each class in classes and interpolate their placement
+    @each $class in $classes
+      $cls-list: append($cls-list, #{if( $placement == nested, #{unquote("&")}, null )}#{$game-state-base-class}#{$class}#{if( $placement == outside, #{unquote(" &")}, null )}, comma)
+    // Return processed list
+    @return $cls-list
+  @else
+    // Gracefully fail sti/functions/classes/__position.sass
+    @warn "No classes were passed to the function: position_class sti/functions/classes/__position.sass"

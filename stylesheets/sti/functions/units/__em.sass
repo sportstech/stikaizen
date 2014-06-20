@@ -1,0 +1,9 @@
+// custom return a em value based off of $base-font-size (compass/typography/vertical_rhythm)
+@function em($value: false, $font-size: $base-font-size)
+  @if $font-size
+    @if $value != 0
+      @return #{$value / $font-size}em
+    @else
+      @return unquote("0px")
+  @else
+    @warn "$base-font-size has not been established"

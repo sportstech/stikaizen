@@ -1,0 +1,10 @@
+=x-rem($property, $values, $from-size: $base-font-size, $force: false)
+  $rem-list: ()
+  $fallback: if( $has-legacy-supports or $has-edge-supports, true, false )
+  // rely on support variables for this
+  @if $values null
+    @each $v in $values
+      $rem-list: append($rem-list, rem($v, $from-size), space)
+    @if $fallback
+      #{$property}: $values#{if($force, unquote(" !important"), null)}
+    #{$property}: $rem-list#{if($force, unquote(" !important"), null)}
