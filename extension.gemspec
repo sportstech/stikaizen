@@ -1,29 +1,29 @@
 # Replace extension with the name of your extension's .rb file
-require './lib/extension'
+require './lib/stikaizen'
 
 Gem::Specification.new do |s|
   # Release Specific Information
   #  Replace Extension with the name you used in your extension.rb
   #   in the mdodule with version and date.
-  s.version = Extension::VERSION
-  s.date = Extension::DATE
+  s.version = Stikaizen::VERSION
+  s.date = Stikaizen::DATE
 
   # Gem Details
   # Replace "extension" with the name of your extension
-  s.name = "extension"
-  s.rubyforge_project = "extension"
+  s.name = "stikaizen"
+  s.rubyforge_project = "stikaizen"
   # Description of your extension
-  s.description = %q{A generalized Compass extension to build off of}
+  s.description = %q{A compass extension to establish base CSS}
   # A summary of your Compass extension. Should be different than Description
-  s.summary = %q{An easy to use system for writing and managing media queries.}
+  s.summary = %q{STI base CSS}
   # The names of the author(s) of the extension.
   # If more than one author, comma separate inside of the brackets
   s.authors = ["Jacob Pellegren"]
   # The email address(es) of the author(s)
   # If more than one author, comma separate inside of the brackets
-  s.email = ["firstlast@extension.com"]
+  s.email = ["frontendteam@sportstechinc.com"]
   # URL of the extension
-  s.homepage = "https://sportstech.unfuddle.com/a#/repositories/35234/"
+  s.homepage = "https://sportstech.unfuddle.com/a#/repositories/35234/browse"
 
   # Gem Files
   # These are the files to be included in your Compass extension.
