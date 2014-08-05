@@ -1,0 +1,20 @@
+@function weight_to_int($weight: false)
+  $calculated-weight: null
+  
+  @if $weight
+    @if type-of($weight) == "string"
+      // these are the only things we'll test for bold or light
+      @if $weight == "normal"
+        $calculated-weight: 400
+      @if $weight == "bold"
+        $calculated-weight: 700
+      @if $weight == "light" or $weight == "lighter"
+        $calculated-weight: 300
+    @else
+      // if it doesn't match as a string it must be a number, return it
+      $calculated-weight: $weight
+      
+    @return $calculated-weight
+    
+  @else
+    @warn "function fontWeightToInt called: no weight was passed in"

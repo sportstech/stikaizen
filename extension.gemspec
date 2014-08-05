@@ -18,12 +18,12 @@ Gem::Specification.new do |s|
   s.summary = %q{An easy to use system for writing and managing media queries.}
   # The names of the author(s) of the extension.
   # If more than one author, comma separate inside of the brackets
-  s.authors = ["First Last"]
+  s.authors = ["Jacob Pellegren"]
   # The email address(es) of the author(s)
   # If more than one author, comma separate inside of the brackets
   s.email = ["firstlast@extension.com"]
   # URL of the extension
-  s.homepage = "http://extension.com"
+  s.homepage = "https://sportstech.unfuddle.com/a#/repositories/35234/"
 
   # Gem Files
   # These are the files to be included in your Compass extension.

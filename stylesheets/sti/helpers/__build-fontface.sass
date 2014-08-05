@@ -1,0 +1,19 @@
+// Mixin to build our font-faces
+=build-font-face($font-pack, $font-settings)
+  @for $fi from 1 through length($font-pack)
+    $font: nth($font-pack, $fi)
+    $font-dir: nth($font-settings, 1)
+    $font-name: nth($font-settings, 2)
+    @if $font
+      $font-file: nth($font, 1)
+      $font-svg-id: nth($font, 2)
+      $font-style: nth($font, 3)
+      $font-weight: nth($font, 4)
+      @font-face
+        font-family: unquote($font-name)
+        // relies on compass/support (bundled with compass/css3)
+        @if $legacy-support-for-ie
+          src: unbust-font-url("#{$font-dir}#{$font-file}.eot", "iefix")
+        src: if(isDesktop(), unquote("local('☺'),"), null)if(isDesktop(), unbust-font-url("#{$font-dir}#{$font-file}.woff") unquote("format(\"woff\"),"), null)unbust-font-url("#{$font-dir}#{$font-file}.ttf") format("truetype"), unbust-font-url("#{$font-dir}#{$font-file}.svg", "#{$font-svg-id}") format("svg")
+        font-style: $font-style
+        font-weight: $font-weight

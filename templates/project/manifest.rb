@@ -1,10 +1,12 @@
 # Description
-description "Description of your Compass Template"
+description "STI Base CSS"
 
 # Stylesheet Import
-file 'screen.scss', :like => :stylesheet, :media => 'screen, projection'
-file 'print.scss', :like => :stylesheet, :media => 'screen, projection'
-file 'ie.scss', :like => :stylesheet, :media => 'screen, projection', :condition => "lt IE 9"
+#file 'screen.scss', :like => :stylesheet, :media => 'screen, projection'
+directory 'platforms/handheld', :within => :sass_dir
+directory 'platforms/tablet', :within => :sass_dir
+directory 'platforms/desktop', :within => :sass_dir
+directory 'games', :within => :sass_dir
 
 # Javascript Import
 # file 'scripts.js', :like => :javascript, :to => 'scripts.js'
@@ -20,5 +22,5 @@ help %Q{
 # Compass Extension Welcome Message
 #  Users will see this when they create a new project using this template.
 welcome_message %Q{
-  Welcome to my Compass Extension!
+  Sports Tech Kaizen has been established. Live long and prosper.
 }
