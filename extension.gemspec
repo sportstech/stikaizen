@@ -39,10 +39,10 @@ Gem::Specification.new do |s|
   s.files += Dir.glob("lib/**/*.*")
 
   # Sass Files
-  # s.files += Dir.glob("stylesheets/**/*.*")
+  s.files += Dir.glob("stylesheets/**/*.*")
 
   # Template Files
-  # s.files += Dir.glob("templates/**/*.*")
+  s.files += Dir.glob("templates/**/*.*")
 
   # Gem Bookkeeping
   # Versions of Ruby and Rubygems you require
