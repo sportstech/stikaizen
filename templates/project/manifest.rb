@@ -29,6 +29,9 @@ stylesheet 'views/__views.sass'
 #Wireframe
 stylesheet 'wireframe/__wireframe.sass'
 
+#Vendor
+directory 'vendor', :within => :sass_dir
+
 #Main 
 stylesheet 'main.css.sass'
 
