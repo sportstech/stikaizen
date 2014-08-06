@@ -1,0 +1,12 @@
+// Main stylesheet trunk to the sass tree. All imports go here. You can rename this stylesheet, as long as it is imported correctly.
+
+// Setting platform variable will determine which folder in platforms will be imported.
+$platform: null 
+
+@import "components/__components"
+@import "games/__games"
+@import "globals/__globals"
+@import "platforms/__platforms" //Make sure $platform is defined before importing
+@import "versions/__versions"
+@import "views/__views"
+@import "wireframe/__wireframe"

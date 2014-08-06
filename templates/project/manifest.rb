@@ -4,49 +4,34 @@ description "STI Base CSS"
 # Stylesheet Import
 #file 'screen.scss', :like => :stylesheet, :media => 'screen, projection'
 
-# Globlas directories
-directory 'globals', :within => :sass_dir
-directory 'globals/helpers', :within => :sass_dir
-directory 'globals/utilities', :within => :sass_dir
-#Globals stylesheets
-#stylesheet 'globals/__globals.sass'
-#stylesheet '__helpers.sass', :to => 'globals/helpers/'
-#stylesheet '__utilities.sass', :to => 'globals/utilities/'
-stylesheet 'test/_test.sass'
-#Games directory
-directory 'games', :within => :sass_dir
-#Games stylesheet
-#stylesheet '__games.sass', :to => 'games/'
+#Globals 
+stylesheet 'globals/__globals.sass'
+stylesheet 'globals/helpers/__helpers.sass'
+stylesheet 'globals/utilities/__utilities.sass'
 
-#components directory
-directory 'components', :within => :sass_dir
-#components stylesheet
-#stylesheet '__components.sass', :to => 'components/'
+#Games 
+stylesheet 'games/__games.sass'
 
-#platforms directories
-directory 'platforms', :within => :sass_dir
-directory 'platforms/handheld', :within => :sass_dir
-directory 'platforms/tablet', :within => :sass_dir
-directory 'platforms/desktop', :within => :sass_dir
-#platforms stylesheets
-#stylesheet '__platforms.sass', :to => '/platforms/'
-#stylesheet '__handheld.sass', :to => '/platforms/handheld/'
-#stylesheet '__tablet.sass', :to => '/platforms/tablet/'
-#stylesheet '__desktop.sass', :to => '/platforms/desktop/'
+#Components 
+stylesheet 'components/__components.sass'
 
-#versions directory
-directory 'versions', :within => :sass_dir
-#versions stylesheet
-#stylesheet '__versions.sass', :to => 'versions/'
+#Platforms 
+stylesheet 'platforms/__platforms.sass'
+stylesheet 'platforms/handheld/__handheld.sass'
+stylesheet 'platforms/tablet/__tablet.sass'
+stylesheet 'platforms/desktop/__desktop.sass'
 
-#views directory
-directory 'views', :within => :sass_dir
-#views stylesheet
-#stylesheet '__views.sass', :to => 'views/'
+#Versions
+stylesheet 'versions/__versions.sass'
 
-#wireframe directory
-directory 'wireframe', :within =>:sass_dir
+#Views
+stylesheet 'views/__views.sass'
 
+#Wireframe
+stylesheet 'wireframe/__wireframe.sass'
+
+#Main 
+stylesheet 'main.css.sass'
 
 # Javascript Import
 # file 'scripts.js', :like => :javascript, :to => 'scripts.js'
