@@ -9,19 +9,19 @@ directory 'globals', :within => :sass_dir
 directory 'globals/helpers', :within => :sass_dir
 directory 'globals/utilities', :within => :sass_dir
 #Globals stylesheets
-stylesheet '__globals.sass', :to => 'globals'
-stylesheet '__helpers.sass', :to => 'globals/helpers'
-stylesheet '__utilities.sass', :to => 'globals/utilities'
-
+#stylesheet 'globals/__globals.sass'
+#stylesheet '__helpers.sass', :to => 'globals/helpers/'
+#stylesheet '__utilities.sass', :to => 'globals/utilities/'
+stylesheet 'test/_test.sass'
 #Games directory
 directory 'games', :within => :sass_dir
 #Games stylesheet
-stylesheet '__games.sass', :to => 'games'
+#stylesheet '__games.sass', :to => 'games/'
 
 #components directory
 directory 'components', :within => :sass_dir
 #components stylesheet
-stylesheet '__components.sass', :to => 'components'
+#stylesheet '__components.sass', :to => 'components/'
 
 #platforms directories
 directory 'platforms', :within => :sass_dir
@@ -29,20 +29,20 @@ directory 'platforms/handheld', :within => :sass_dir
 directory 'platforms/tablet', :within => :sass_dir
 directory 'platforms/desktop', :within => :sass_dir
 #platforms stylesheets
-stylesheet '__platforms.sass', :to => 'platforms'
-stylesheet '__handheld.sass', :to => 'platforms/handheld'
-stylesheet '__tablet.sass', :to => 'platforms/tablet'
-stylesheet '__desktop.sass', :to => 'platforms/desktop'
+#stylesheet '__platforms.sass', :to => '/platforms/'
+#stylesheet '__handheld.sass', :to => '/platforms/handheld/'
+#stylesheet '__tablet.sass', :to => '/platforms/tablet/'
+#stylesheet '__desktop.sass', :to => '/platforms/desktop/'
 
 #versions directory
 directory 'versions', :within => :sass_dir
 #versions stylesheet
-stylesheet '__versions.sass', :to => 'versions'
+#stylesheet '__versions.sass', :to => 'versions/'
 
 #views directory
 directory 'views', :within => :sass_dir
 #views stylesheet
-stylesheet '__views.sass', :to => 'views'
+#stylesheet '__views.sass', :to => 'views/'
 
 #wireframe directory
 directory 'wireframe', :within =>:sass_dir
