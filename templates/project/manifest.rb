@@ -33,7 +33,7 @@ stylesheet 'wireframe/__wireframe.sass'
 directory 'vendor', :within => :sass_dir
 
 #Main 
-stylesheet 'main.css.sass'
+stylesheet 'project.css.sass'
 
 # Javascript Import
 # file 'scripts.js', :like => :javascript, :to => 'scripts.js'
