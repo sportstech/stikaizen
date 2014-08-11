@@ -16,9 +16,9 @@ stylesheet 'games/__games.sass'
 stylesheet 'components/__components.sass'
 
 #Platforms 
-stylesheet 'platforms/handheld/__handheld.sass'
-stylesheet 'platforms/tablet/__tablet.sass'
-stylesheet 'platforms/desktop/__desktop.sass'
+stylesheet 'platforms/__handheld.sass'
+stylesheet 'platforms/__tablet.sass'
+stylesheet 'platforms/__desktop.sass'
 
 #Versions
 stylesheet 'versions/__versions.sass'
