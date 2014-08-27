@@ -1,0 +1,12 @@
+=mobile-only($this: $platform)
+  @if $this == "mobile"
+    @content
+=desktop-only($this: $platform)
+  @if $this == "desktop"
+    @content  
+=not-mobile($this: $platform)
+  @if $this != "mobile"
+    @content
+=not-desktop($this: $platform)
+  @if $this != "desktop"
+    @content
