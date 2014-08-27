@@ -1,0 +1,5 @@
+=extend-version-sprite($m: false, $s: false, $key: nth($version-sponsor, 2))
+  @if $m and $s
+    $m-name: sprite-map-name($m)
+    @warn "trying to extend: #{$key}#{$m-name}#{unquote($s)}"
+    @extend %#{$m-name}#{$key}-#{unquote($s)}

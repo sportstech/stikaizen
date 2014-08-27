@@ -1,0 +1,6 @@
+@function isSponsor($this: false)
+  @if $version-sponsor
+    //@debug "this == #{$this} does the version sponsor (#{nth($version-sponsor, 2)} == this? #{nth($version-sponsor, 2) == $this})"
+    @return nth($version-sponsor, 2) == $this
+  @else
+    @warn "Version sponsor helper returned false, no string was passed in."

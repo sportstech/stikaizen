@@ -1,0 +1,28 @@
+@function x-sprite-dimension( $sprite-map, $layout: "vertical", $axis: "y")
+  @if $sprite-map
+    $list: sprite_names($sprite-map)
+    $total: 0
+     
+    @each $sprite-file in $list
+      @if $layout == "horizontal"
+        $spriteWidth: image-width(sprite-file($sprite-map, $sprite-file))
+        $last: $spriteWidth
+         
+           
+      @else
+        @if $axis == "x"
+          $spriteWidth: image-width(sprite-file($sprite-map, $sprite-file))
+          $last: $spriteWidth
+           
+          @if $spriteWidth > $total
+            $total: $spriteWidth
+            $last: $spriteWidth
+  
+        @else
+          $spriteHeight: image-height(sprite-file($sprite-map, $sprite-file))
+          $total: $total + $spriteHeight
+         
+    @return $total
+     
+  @else
+    @warn "return-width-for() - No sprite map was passed in."
