@@ -1,4 +1,9 @@
 // Compass > 0.12
-$has-edge-supports: if( $supported-browsers, index($supported-browsers, ie) , false)
+$has-edge-supports: false !default
+$has-legacy-supports: false !default
+
+@if $supported-browsers
+  @has-edge-supports: index($supported-browsers, ie)
 // Compass < 0.13
-$has-legacy-supports: if( $support-for-ie8, true, false )
+@if $legacy-support-for-ie
+  $has-legacy-supports: true
