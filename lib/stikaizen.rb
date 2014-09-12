@@ -18,7 +18,7 @@ Compass::Frameworks.register('stikaizen', :path => extension_path)
 #  Date is in the form of YYYY-MM-DD
 module Stikaizen
   VERSION = "1.0.1"
-  DATE = "2014-08-05"
+  DATE = "2014-09-12"
 end
 
 # This is where any custom SassScript should be placed. The functions will be  
