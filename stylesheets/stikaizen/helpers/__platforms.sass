@@ -16,3 +16,28 @@
 =not-tablet($this: $platform)
   @if $this != "tablet"
     @content
+
+=sti-hover($this: $platform)
+  @if $this != "desktop"
+    &.activated
+      @content
+  @else
+    &:hover
+      @content
+
+=sti-hover-or-active($this: $platform)
+  @if $this != "desktop"
+    &.activated
+      @content
+  @else
+    &:hover,
+    &:active
+      @content
+
+=sti-active($this: $platform)
+  @if $this != "desktop"
+    &.activated
+      @content
+  @else
+    &:active
+      @content
