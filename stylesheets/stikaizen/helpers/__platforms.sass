@@ -13,3 +13,36 @@
 =not-desktop
   @if ( isDesktop($platform) ) == false
     @content
+
+=tablet-only
+  @if isTablet($platform)
+    @content
+    
+=not-tablet
+  @if ( isTablet($platform) ) == false
+    @content
+
+=sti-hover($this: $platform)
+  @if ( isDesktop($platform) ) == false
+    &.activated
+      @content
+  @else
+    &:hover
+      @content
+
+=sti-hover-or-active($this: $platform)
+  @if ( isDesktop($platform) ) == false
+    &.activated
+      @content
+  @else
+    &:hover,
+    &:active
+      @content
+
+=sti-active($this: $platform)
+  @if ( isDesktop($platform) ) == false
+    &.activated
+      @content
+  @else
+    &:active
+      @content
