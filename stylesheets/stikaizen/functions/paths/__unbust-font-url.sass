@@ -1,0 +1,6 @@
+@function unbust-font-url($file, $hash: false)
+  $addition: ""
+  @if $hash
+    $addition: if($hash == "iefix", "?##{$hash}", "##{$hash}")
+  $render: "#{$file}#{$addition}"
+  @return font-url(unquote($render))
