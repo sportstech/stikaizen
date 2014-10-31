@@ -17,7 +17,7 @@ Compass::Frameworks.register('stikaizen', :path => extension_path)
 #    a prerelease version
 #  Date is in the form of YYYY-MM-DD
 module Stikaizen
-  VERSION = "1.0.2"
+  VERSION = "1.0.3"
   DATE = "2014-10-02"
 end
 
