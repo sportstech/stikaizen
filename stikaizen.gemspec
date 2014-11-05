@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   
   # Dependencies for any projet that uses this gem
-  s.add_dependency "sass", ">=3.2.0"
-  s.add_dependency "compass", ">= 0.12.1"
+  spec.add_dependency "sass", ">=3.2.0"
+  spec.add_dependency "compass", ">= 0.12.1"
 end
