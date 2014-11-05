@@ -17,10 +17,6 @@ Your `templates` directory is where you store any project templates/patterns you
 
 `compass create <my_project> -r extension --using extension`
 
-## CHANGELOG.md/README.md
-
-These files aren't required for your Compass extension, but I really like including them as they are useful for Users to understand the direction of your Compass extension. Yes! That means you get to throw this README out and write your own! Do it!
-
 ## extension.gemspec
 
 This is the magic file that will turn your collection of files into a packaged Compass extension! It's all laid out for you, just add/change what you need! When you're all done editing what you need, in the command line, from the directory where that lives, type the following:

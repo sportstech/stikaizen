@@ -10,17 +10,6 @@ require 'compass'
 extension_path = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 Compass::Frameworks.register('stikaizen', :path => extension_path)
 
-# Version and date of version for your Compass extension.
-# Replace Extension with the name of your extension
-#  Letters, numbers, and underscores only
-#  Version is a number. If a version contains alphas, it will be created as
-#    a prerelease version
-#  Date is in the form of YYYY-MM-DD
-module Stikaizen
-  VERSION = "1.0.3"
-  DATE = "2014-10-02"
-end
-
 # This is where any custom SassScript should be placed. The functions will be  
 #  available on require of your extension without the need for users to import
 #  any partials. Uncomment below.
@@ -28,3 +17,8 @@ end
 # module Sass::Script::Functions
 # 
 # end
+
+require "stikaizen/version"
+
+module Stikaizen
+end
