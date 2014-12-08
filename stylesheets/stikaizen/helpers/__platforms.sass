@@ -1,3 +1,7 @@
+=handheld-only
+  @if isHandheld($platform)
+    @content
+    
 =mobile-only
   @if isHandheld($platform)
     @content
@@ -5,7 +9,11 @@
 =desktop-only
   @if isDesktop($platform)
     @content
-    
+
+=not-handheld
+  @if ( isHandheld($platform) ) == false
+    @content
+
 =not-mobile
   @if ( isHandheld($platform) ) == false
     @content
