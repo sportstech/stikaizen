@@ -171,7 +171,7 @@ $large-max-screen: 2430px !default
   $deviceMinWidth: 360px
   $deviceMaxWidth: 640px
   $devicePixelRatio: 3
-  $deviceAspectRatio: "16:9"
+  $deviceAspectRatio: "16/9"
   @if $orientation == all
     @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
       @content
