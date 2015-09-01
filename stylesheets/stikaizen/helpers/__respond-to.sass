@@ -57,6 +57,16 @@ $large-max-screen: 2430px !default
     @content
 
 // ---------------------------------------------------------------------------------------------------------------------
+// --- Apple Watch -----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+=appleWatch
+  $deviceMinWidth: 38mm
+  $deviceMaxWidth: 42mm
+  @media (max-device-width: $deviceMaxWidth) and (min-device-width: $deviceMinWidth)
+    @content
+
+// ---------------------------------------------------------------------------------------------------------------------
 // --- iphone ----------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -65,10 +75,10 @@ $large-max-screen: 2430px !default
   $deviceMaxWidth: 480px
   $devicePixelRatio: 1
   @if $orientation == all
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio)
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -79,28 +89,26 @@ $large-max-screen: 2430px !default
   $deviceMinWidth: 320px
   $deviceMaxWidth: 480px
   $devicePixelRatio: 2
-  $deviceAspectRatio: "2/3"
   @if $orientation == all
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: 2 / 3) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
-// --- iphone-5 --------------------------------------------------------------------------------------------------------
+// --- iphone-5 and iphone5S --------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 
 =iphone5($orientation: all)
   $deviceMinWidth: 320px
   $deviceMaxWidth: 568px
   $devicePixelRatio: 2
-  $deviceAspectRatio: "40/71"
   @if $orientation == all
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -112,10 +120,10 @@ $large-max-screen: 2430px !default
   $deviceMaxWidth: 667px
   $devicePixelRatio: 2
   @if $orientation == all
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio)
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -127,10 +135,10 @@ $large-max-screen: 2430px !default
   $deviceMaxWidth: 736px
   $devicePixelRatio: 3
   @if $orientation == all
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio)
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -147,7 +155,7 @@ $large-max-screen: 2430px !default
       //iPhone 6 and iPhone 6+ portrait and landscape
       @content
   @else
-    @media only screen and (max-device-width: $maxDeviceWidth1), only screen and (max-device-width: $maxDeviceWidth2), only screen and (max-width: $maxWidth) and (orientation : #{$orientation})
+    @media only screen and (max-device-width: $maxDeviceWidth1), only screen and (max-device-width: $maxDeviceWidth2), only screen and (max-width: $maxWidth) and (orientation : $orientation)
       //iPhone 6 and iPhone 6+ portrait or landscape
       @content
 
@@ -162,7 +170,7 @@ $large-max-screen: 2430px !default
     @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (orientation: $orientation)
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -177,7 +185,7 @@ $large-max-screen: 2430px !default
     @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
 
 
@@ -186,13 +194,27 @@ $large-max-screen: 2430px !default
 // ---------------------------------------------------------------------------------------------------------------------
 
 =galaxyS4($orientation: all)
+  $deviceMinWidth: 320px
+  $deviceMaxWidth: 640px
+  $devicePixelRatio: 3
+  @if $orientation == all
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
+      @content
+  @else
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
+      @content
+
+// ---------------------------------------------------------------------------------------------------------------------
+// --- Galaxy S5 --------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+=galaxyS5($orientation: all)
   $deviceMinWidth: 360px
   $deviceMaxWidth: 640px
   $devicePixelRatio: 3
-  $deviceAspectRatio: "16/9"
   @if $orientation == all
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio)
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
       @content
   @else
-    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-device-pixel-ratio: $devicePixelRatio) and (device-aspect-ratio: $deviceAspectRatio) and (orientation: #{$orientation})
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
