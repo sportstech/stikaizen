@@ -1,4 +1,4 @@
 module Stikaizen
-  VERSION = "1.0.11"
-  DATE = "2015-08-17"
+  VERSION = "1.0.12"
+  DATE = "2015-09-01"
 end

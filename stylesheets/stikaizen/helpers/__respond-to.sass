@@ -134,6 +134,24 @@ $large-max-screen: 2430px !default
       @content
 
 // ---------------------------------------------------------------------------------------------------------------------
+// --- iphone-6 and 6 Plus ---------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+=iphone6-6plus($orientation: all)
+  $maxDeviceWidth1: 640px
+  $maxDeviceWidth2: 667px
+  $maxWidth: 480px
+
+  @if $orientation == all
+    @media only screen and (max-device-width: $maxDeviceWidth1), only screen and (max-device-width: $maxDeviceWidth2), only screen and (max-width: $maxWidth)
+      //iPhone 6 and iPhone 6+ portrait and landscape
+      @content
+  @else
+    @media only screen and (max-device-width: $maxDeviceWidth1), only screen and (max-device-width: $maxDeviceWidth2), only screen and (max-width: $maxWidth) and (orientation : #{$orientation}){ 
+      //iPhone 6 and iPhone 6+ portrait or landscape
+      @content
+
+// ---------------------------------------------------------------------------------------------------------------------
 // --- ipads (all) -----------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------------
 
