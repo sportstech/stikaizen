@@ -218,3 +218,33 @@ $large-max-screen: 2430px !default
   @else
     @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
       @content
+
+// ---------------------------------------------------------------------------------------------------------------------
+// --- Galaxy S6 --------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+=galaxyS6($orientation: all)
+  $deviceMinWidth: 360px
+  $deviceMaxWidth: 640px
+  $devicePixelRatio: 4
+  @if $orientation == all
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
+      @content
+  @else
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
+      @content
+
+// ---------------------------------------------------------------------------------------------------------------------
+// --- Note 4 --------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
+
+=note4($orientation: all)
+  $deviceMinWidth: 360px
+  $deviceMaxWidth: 640px
+  $devicePixelRatio: 4
+  @if $orientation == all
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio)
+      @content
+  @else
+    @media only screen and (min-device-width: $deviceMinWidth) and (max-device-width: $deviceMaxWidth) and (-webkit-min-device-pixel-ratio: $devicePixelRatio) and (orientation: $orientation)
+      @content
